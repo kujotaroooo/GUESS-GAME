@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DRAW TO WIN</title>
+  
+<style>
+  body{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    
+    background-color: darkslategrey;
+  }
+  p{
+    color:goldenrod;
+
+  }
+  h1{
+  
+    
+    color:goldenrod;
+  }
+  button{
+    background-color: seagreen;
+    
+    
+  }
+  #bb{ 
+    color:goldenrod;
+  }
+  #gif{
+    display:block;
+    margin:auto;
+  }
+</style>
+  
+
+<body>
+  <h1>DRAW TO GET THE LUCKY NUMBER</h1>
+<h1 id="a"></h1>
+<h3 id="bb"></h3>
+<button id ="b" onclick="b()">DRAW</button>
+<button id="c" onclick ="c()">SAVE
+</button>
+ <img id="gif"
+     src="cong.gif">
+  </body>
+<script>
+let number;
+document.getElementById("gif").style.visibility="hidden"
+document.getElementById("bb").style.visibility="hidden"
+function b() {
+ number = Math.floor(Math.random() * 1000 + 1);
+  document.getElementById("a").innerText = number;
+  document.getElementById("bb").style.visibility="hidden"
+}
+
+function c() {
+  
+  if (number === 1002) {
+    document.getElementById("bb").innerText = "Message me this word 'HELLO WORLD'"
+    document.getElementById("bb").style.visibility="visible"
+    document.getElementById("a").style.visibility="hidden"
+    document.getElementById("b").style.visibility="hidden"
+    document.getElementById("c").style.visibility="hidden"
+    document.getElementById("gif").style.visibility="visible"
+  } else {
+    document.getElementById("bb").innerText = "TRY AGAIN"
+    document.getElementById("bb").style.visibility="visible"
+  }
+}
+
+</script>
+
+
+
+</html>
