@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DRAW TO WIN</title>
+  <title>ONE IN A MILLION</title>
   
 <style>
   body{
@@ -41,7 +41,7 @@
   
 
 <body>
-  <h1>DRAW TO GET THE LUCKY NUMBER</h1>
+  <h1>DRAW TO GET THE LUCKY 1 NUMBER</h1>
 <h1 id="a"></h1>
 <h3 id="bb"></h3>
 <button id ="b" onclick="b()">DRAW</button>
@@ -55,14 +55,14 @@ let number;
 document.getElementById("gif").style.visibility="hidden"
 document.getElementById("bb").style.visibility="hidden"
 function b() {
- number = Math.floor(Math.random() * 1000 + 1);
+ number = Math.floor(Math.random() * 1000000 + 1);
   document.getElementById("a").innerText = number;
   document.getElementById("bb").style.visibility="hidden"
 }
 
 function c() {
   
-  if (number === 1002) {
+  if (number === 1) {
     document.getElementById("bb").innerText = "Message me this word 'HELLO WORLD'"
     document.getElementById("bb").style.visibility="visible"
     document.getElementById("a").style.visibility="hidden"
